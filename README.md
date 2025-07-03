@@ -1,7 +1,7 @@
 ```SQL PROJECT 1```|
 ```HABEEB HAMEED```
 
-** Project Summary
+** Project Summary**
 1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
 2. **Data Cleaning**: Identify and remove any records with missing or null values.
 2. **Data Cleaning**: Identify and remove any records with missing or null values. Also, renamed an incorrect column.
