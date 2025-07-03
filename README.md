@@ -1,4 +1,4 @@
-```SQL PROJECT 1```
+```SQL PROJECT 1```|
 ```HABEEB HAMEED```
 
 ** Project Summary
