@@ -3,7 +3,6 @@
 
 **Project Summary**
 1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
 2. **Data Cleaning**: Identify and remove any records with missing or null values. Also, renamed an incorrect column.
 3. **Exploratory Data Analysis (EDA)**: Perform fundamental exploratory data analysis to understand the dataset.
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
@@ -104,7 +103,7 @@ RENAME column quantiy to quantity
 
 ### 3. Data Analysis & Findings
 
-1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05
+1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**
 ```sql
 SELECT *
 FROM retail_sales
@@ -112,7 +111,7 @@ FROM retail_sale
 WHERE sale_date = '2022-11-05';
 ```
 
-2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 2 in the month of Nov-2022
+2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 2 in the month of Nov-2022**
 ```sql
 SELECT 
   *
@@ -132,14 +131,14 @@ WHERE
 	TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
 ```
 
-3. **Write a SQL query to calculate the total sales (total_sale) for each category.
+3. **Write a SQL query to calculate the total sales (total_sale) for each category**
 ```sql
 SELECT SUM(total_sale) tot_sale, category, COUNT(*) tot_orders
 FROM retail_sale
 GROUP BY 2
 ```
 
-4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
+4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category**
 ```sql
 SELECT
     ROUND(AVG(age), 2) as avg_age
@@ -150,7 +149,7 @@ WHERE category = 'Beauty'
 GROUP BY 2
 ```
 
-5. **Write a SQL query to find all transactions where the total sale exceeds 1000.
+5. **Write a SQL query to find all transactions where the total sale exceeds 1000**
 ```sql
 SELECT * FROM retail_sales
 WHERE total_sale > 1000
@@ -160,7 +159,7 @@ WHERE
 	total_sale > 1000
 ```
 
-6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
+6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category**
 ```sql
 SELECT 
     category,
@@ -178,7 +177,7 @@ GROUP BY 2,3
 ORDER BY 1 DESC
 ```
 
-7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**: (in Subquery form)
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**: (in Subquery form)**
 ```sql
 SELECT 
        year,
@@ -213,7 +212,7 @@ FROM
 )
 WHERE rank =1
 ```
-** (In CTE form)
+**(In CTE form)**
 ```sql
 WITH avg_sales_ranked AS(
 	SELECT 
@@ -231,7 +230,7 @@ FROM avg_sales_ranked
 WHERE rank = 1
 ```
 
-8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+8. **Write a SQL query to find the top 5 customers based on the highest total sales**
 ```sql
 SELECT 
     customer_id,
@@ -245,7 +244,7 @@ GROUP BY 1,2
 ORDER BY 3 DESC
 LIMIT 5
 ```
-9. **Calculate the monthly sales for each year. Find the month with the most sales
+9. **Calculate the monthly sales for each year. Find the month with the most sales**
 ```sql
 WITH sales_ranked AS(
 	SELECT 
@@ -266,7 +265,7 @@ FROM sales_ranked
 ORDER BY 3 desc
 LIMIT 6
 ```
-10. **Calculate the month that has had the most sales overall
+10. **Calculate the month that has had the most sales overall**
 ```sql
 SELECT TO_CHAR(sale_date, 'month') month_name,
 		SUM(total_sale) Tot_sale
@@ -276,7 +275,7 @@ ORDER BY 2 DESC
 LIMIT 5
 ```
 
-11. **Find the number of unique customers who purchased items from each category
+11. **Find the number of unique customers who purchased items from each category**
 ```sql
 SELECT 
     category,    
@@ -289,7 +288,7 @@ GROUP BY 2
 ORDER BY 1 DESC
 ```
 
-12 **Create each shift and number of orders example (morning < 12, afternoon >12 and <17, evening)
+12 **Create each shift and number of orders example (morning < 12, afternoon >12 and <17, evening)**
 ```sql
 WITH hourly_sale
 AS
@@ -317,7 +316,7 @@ GROUP BY 2
 ORDER BY 1 DESC
 ```
 
-13. **Write a SQL query to find the top 5 customers based on the highest total sales
+13. **Write a SQL query to find the top 5 customers based on the highest total sales**
 ```sql
 SELECT 
     shift,
