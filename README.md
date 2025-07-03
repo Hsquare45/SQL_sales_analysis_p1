@@ -1,5 +1,5 @@
-##SQL PROJECT 1
-###HABEEB HAMEED
+**SQL PROJECT 1
+**HABEEB HAMEED
 
 ** Project Summary
 1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
