@@ -177,7 +177,7 @@ GROUP BY 2,3
 ORDER BY 1 DESC
 ```
 
-7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**: (in Subquery form)**
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year: (in Subquery form)**
 ```sql
 SELECT 
        year,
